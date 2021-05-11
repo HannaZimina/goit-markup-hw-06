@@ -768,3 +768,131 @@ address a:focus {
 
   background-color: var(--dark-icon-background);
 }
+
+/* footer form */
+
+.footer-form {
+  margin-left: 93px;
+}
+.follow-form {
+}
+.email-follow-field {
+  width: 358px;
+  padding: 16px 15px;
+  background-color: transparent;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: var(--light-text-color);
+
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  outline: none;
+}
+.email-follow-field::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.button-footer-form {
+  padding: 10px 32px;
+  min-width: 200;
+  margin-left: 12px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  background-color: var(--accent-color);
+  color: var(--light-text-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+/* Modal form */
+textarea {
+  resize: none;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form {
+  margin: 40px;
+}
+.modal-form-h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.modal-form-card {
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+.user-field {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  outline: none;
+  transition: border-color 250ms var(--cubic-bezier);
+}
+
+.modal-form-mark {
+  font-size: 12px;
+  line-height: 1.16;
+
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+}
+.modal-form-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+
+  transition: fill 250ms var(--cubic-bezier);
+}
+.comment-area {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  margin-top: 4px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  outline: none;
+  transition: border-color 250ms var(--cubic-bezier);
+}
+.comment-area::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-text-color);
+}
+
+.checkbox-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
