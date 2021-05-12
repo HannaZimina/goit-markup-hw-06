@@ -8,6 +8,7 @@
   --background-dark: rgba(47, 48, 58, 1);
   --primary-icon-color: rgba(175, 177, 184, 1);
   --dark-icon-background: rgba(255, 255, 255, 0.1);
+  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   background-color: var(--background-primary);
@@ -125,7 +126,7 @@ header {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 .navigation-links .link:hover,
 .navigation-links .link:focus {
@@ -144,7 +145,7 @@ header {
 
   transition-property: fill;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 .adress-link-icon:hover {
   fill: currentColor;
@@ -169,7 +170,7 @@ header {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 .adress-links .link:hover,
 .adress-links .link:focus {
@@ -247,8 +248,8 @@ header {
   background-color: rgba(0, 0, 0, 0.1);
 
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms var(--cubic-bezier),
+    visibility 250ms var(--cubic-bezier);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -270,8 +271,15 @@ header {
 
   background-color: var(--light-text-color);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  opacity: 1;
+
+  transition: transform 250ms var(--cubic-bezier),
+    opacity 250ms var(--cubic-bezier);
 }
+
 .modal-button {
   position: absolute;
   right: 8px;
@@ -289,6 +297,13 @@ header {
   position: absolute;
   bottom: -1px;
   right: -1px;
+
+  fill: var(--primary-text-color);
+  transition: fill 250ms var(--cubic-bezier);
+}
+.modal-svg:hover,
+.modal-svg:focus {
+  fill: var(--accent-color);
 }
 
 .highlights {
@@ -451,7 +466,7 @@ header {
 
   transition-property: background-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 .soc-link-icon {
   width: 20px;
@@ -460,7 +475,7 @@ header {
 
   transition-property: fill;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 .soc-link:hover,
 .soc-link:focus {
@@ -660,7 +675,7 @@ button {
   text-decoration: none;
   cursor: pointer;
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms var(--cubic-bezier);
 }
 
 .portfolio-card-link:hover,
@@ -707,7 +722,7 @@ footer {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 .footer-mail-link,
 .footer-number-link {
@@ -722,7 +737,7 @@ footer {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic-bezier);
 }
 .footer-list:not(:last-child) {
   margin-bottom: 9px;
@@ -774,8 +789,7 @@ address a:focus {
 .footer-form {
   margin-left: 93px;
 }
-.follow-form {
-}
+
 .email-follow-field {
   width: 358px;
   padding: 16px 15px;
@@ -796,6 +810,8 @@ address a:focus {
   color: rgba(255, 255, 255, 0.6);
 }
 .button-footer-form {
+  display: inline-flex;
+  justify-content: space-between;
   padding: 10px 32px;
   min-width: 200;
   margin-left: 12px;
@@ -814,6 +830,9 @@ address a:focus {
 
   cursor: pointer;
 }
+.subscribe-icon {
+  margin-left: 10px;
+}
 
 /* Modal form */
 textarea {
@@ -824,7 +843,7 @@ textarea {
   flex-direction: column;
 }
 .modal-form {
-  margin: 40px;
+  padding: 40px;
 }
 .modal-form-h2 {
   margin-top: 0;
@@ -849,7 +868,11 @@ textarea {
   border-radius: 4px;
 
   outline: none;
+
   transition: border-color 250ms var(--cubic-bezier);
+}
+.user-field:focus {
+  border-color: var(--accent-color);
 }
 
 .modal-form-mark {
@@ -870,18 +893,29 @@ textarea {
 
   transition: fill 250ms var(--cubic-bezier);
 }
+.user-field:focus + .modal-form-icon {
+  fill: var(--accent-color);
+}
+
+.comment-section {
+  margin-bottom: 20px;
+  margin-top: 4px;
+}
+
 .comment-area {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
-  margin-bottom: 20px;
-  margin-top: 4px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   outline: none;
+
   transition: border-color 250ms var(--cubic-bezier);
+}
+.comment-area:focus {
+  border-color: var(--accent-color);
 }
 .comment-area::placeholder {
   font-size: 12px;
@@ -892,7 +926,82 @@ textarea {
 }
 
 .checkbox-block {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -appearance: none;
+}
+
+.checkbox-wrap {
+  position: relative;
+  display: inline-block;
+
+  width: 16px;
+  height: 15px;
+  top: 3px;
+  margin-right: 7px;
+
+  background-color: var(--background-primary);
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+
+  transition: background-color 250ms var(--cubic-bezier),
+    border 250ms var(--cubic-bezier);
+}
+
+.checkbox:checked + .checkbox-wrap {
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  fill: var(--light-text-color);
+  stroke: var(--light-text-color);
+}
+
+.policy-label {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-text-color);
+}
+.policy-link {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+.button-send {
+  display: block;
+  padding: 10px 55px;
+  min-width: 200;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  background-color: var(--accent-color);
+  color: var(--light-text-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  cursor: pointer;
 }

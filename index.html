@@ -373,13 +373,18 @@
                     <h3 class="join-main">Подпишитесь на рассылку</h3>
                     <input type="email" name="email-follow" placeholder="E-mail" autocomplete="off" class="email-follow-field"/>
                 </label>
-                <button type="submit" class="button-footer-form">Подписаться</button>
+                <button type="submit" class="button-footer-form">Подписаться   
+                    <svg class="subscribe-icon" width="24px" height="24px">
+                        <use href="./images/sprite.svg#icon-send"></use>
+                    </svg></button>
 
             </form>
         </div>
     
     </div>
     </footer>
+
+    <!-- modal window -->
      <div class="backdrop is-hidden" data-modal>
          <div class="modal">
              <button class="modal-button" data-modal-close><svg class="modal-svg" width="30px" height="30px" ><use href="./images/sprite.svg#icon-close"></use></svg></button>
@@ -411,23 +416,27 @@
                         </svg>
                      </div>
                      <label for="comment" class="modal-form-mark">Комментарий</label>
-                     <div>
+                     <div class="comment-section">
                     <textarea name="comment" placeholder="Введите текст" class="comment-area"></textarea>
                     </div>
 
                         <div class="checkbox-block">
-                           <label for="policy" class="policy-label"><input type="checkbox" name="policy" value="Agree" class="checkbox"
-                                    id="policy" />
+                           <label for="checkbox" class="policy-label">
+                               <input type="checkbox" name="checkbox" value="agree" class="checkbox" id="checkbox"/>
+                               
                                 <span class="checkbox-wrap">
                                      <svg class="checkbox-icon" width="16" height="15">
-                                        <use href="./images/icons.svg#icon-check"></use>
+                                        <use href="./images/sprite.svg#icon-check"></use>
                                     </svg>
                                 </span>
+                                
                                         Соглашаюсь с рассылкой и принимаю
-                                <a href="" target="_blank" rel="noopener noreferrer" class="policy-link">Условия договора</a></label>
+                                <a href="" target="_blank" rel="noopener noreferrer" class="policy-link">Условия договора</a>
+                                </label>
+                            
                         </div>
 
-                    <button type="submit" class="button-main">Отправить</button>
+                    <button type="submit" class="button-send">Отправить</button>
                  </form>
              </div>
          </div>
