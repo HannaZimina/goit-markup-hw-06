@@ -369,8 +369,9 @@
         </div>
         <div class="footer-form">
             <form class="follow-form">
-                <label>
+                
                     <h3 class="join-main">Подпишитесь на рассылку</h3>
+                    <label>
                     <input type="email" name="email-follow" placeholder="E-mail" autocomplete="off" class="email-follow-field"/>
                 </label>
                 <button type="submit" class="button-footer-form">Подписаться   
@@ -397,7 +398,7 @@
                 <form class="contact-form" autocomplete="on" novalidate>
                     <label for="user-name" class="modal-form-mark">Имя</label>
                      <div class="modal-form-card">
-                        <input type="text" name="user-name" class="user-field" />
+                        <input type="text" name="user-name" class="user-field" id="user-name"/>
                         <svg class="modal-form-icon">
                             <use href="./images/sprite.svg#icon-user-name"></use>
                         </svg>
@@ -405,21 +406,21 @@
 
                     <label for="user-phone" class="modal-form-mark">Телефон</label>
                      <div class="modal-form-card">
-                        <input type="tel" name="user-phone" class="user-field" />
+                        <input type="tel" name="user-phone" class="user-field" id="user-phone"/>
                         <svg class="modal-form-icon">
                             <use href="./images/sprite.svg#icon-user-phone"></use>
                         </svg>
                     </div>
                     <label for="user-email" class="modal-form-mark">Почта</label>
                     <div class="modal-form-card">
-                        <input type="email" name="user-email" class="user-field" />
+                        <input type="email" name="user-email" class="user-field" id="user-email"/>
                         <svg class="modal-form-icon">
                             <use href="./images/sprite.svg#icon-user-mail"></use>
                         </svg>
                      </div>
                      <label for="comment" class="modal-form-mark">Комментарий</label>
                      <div class="comment-section">
-                    <textarea name="comment" placeholder="Введите текст" class="comment-area"></textarea>
+                    <textarea name="comment" placeholder="Введите текст" class="comment-area" id="comment"></textarea>
                     </div>
 
                         <div class="checkbox-block">

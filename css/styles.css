@@ -960,11 +960,12 @@ textarea {
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
 
-  transition: border 250ms var(--cubic-bezier);
+  transition: border 250ms var(--cubic-bezier),
+    background-image 250ms var(--cubic-bezier);
 }
 
 .checkbox:checked + .checkbox-wrap {
-  background-image: url("../images/check.svg");
+  background-image: url(../images/check.svg);
   border: var(--accent-color);
 }
 
