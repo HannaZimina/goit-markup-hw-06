@@ -964,7 +964,7 @@ textarea {
 }
 
 .checkbox:checked + .checkbox-wrap {
-  background-image: url(/images/icon-check.svg);
+  background-image: url(./images/icon-check.svg);
   border: var(--accent-color);
 }
 
